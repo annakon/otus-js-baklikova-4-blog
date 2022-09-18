@@ -1,0 +1,29 @@
+{
+  "name": "otus-js-baklikova-4-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check . && eslint .",
+    "lint:fix": "prettier --write . && eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annakon/otus-js-baklikova-4-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annakon/otus-js-baklikova-4-blog/issues"
+  },
+  "homepage": "https://github.com/annakon/otus-js-baklikova-4-blog#readme",
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.7.1"
+  }
+}
