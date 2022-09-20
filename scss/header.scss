@@ -1,7 +1,4 @@
-.main {
-  text-align: end;
-}
-
-.contacts {
-  text-align: left;
+header {
+  display: flex;
+  justify-content: space-between;
 }
