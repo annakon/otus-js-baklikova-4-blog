@@ -58,6 +58,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "contacts.html",
+      filename: 'contacts.html',
+    }),
     new MiniCssExtractPlugin(),
   ],
   optimization: {
