@@ -1,3 +1,5 @@
+@import "header.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -22,10 +24,5 @@ html {
 
 a {
   font-size: 32px;
-}
-
-.mainList {
-  margin-bottom: 4rem;
-  margin-top: 4rem;
 }
 
