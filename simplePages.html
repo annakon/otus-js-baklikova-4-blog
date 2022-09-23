@@ -11,5 +11,15 @@
     <a href="index.html">на главную</a>
     <a href="contacts.html" class="contacts">контакты</a>
 </header>
+<article>
+</article>
+<script>
+    window.addEventListener("load", function(event) {
+        const a = localStorage.getItem("text");
+        if (a !== null) {
+            document.querySelector("article").innerHTML=JSON.parse(a, []);
+        }
+    });
+</script>
 </body>
 </html>
