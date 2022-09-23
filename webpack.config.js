@@ -62,6 +62,14 @@ module.exports = {
       template: "contacts.html",
       filename: 'contacts.html',
     }),
+    new HtmlWebpackPlugin({
+      template: "categories.html",
+      filename: 'categories.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: "simplePages.html",
+      filename: 'simplePages.html',
+    }),
     new MiniCssExtractPlugin(),
   ],
   optimization: {

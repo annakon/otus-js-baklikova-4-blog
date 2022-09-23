@@ -1,6 +1,4 @@
 @import "main.scss";
-
-.mainList {
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-}
+@import "header.scss";
+@import "categories.scss";
+@import "mainList.scss";
