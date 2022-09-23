@@ -32,7 +32,7 @@
 <script>
     document.addEventListener('click', e => {
         if (e.target.nodeName === 'A') {
-            localStorage.setItem("text", JSON.stringify(e.target.innerHTML));
+            localStorage.setItem("text", JSON.stringify(e.target.parentNode.parentNode.innerHTML));
         }
     })
 </script>
