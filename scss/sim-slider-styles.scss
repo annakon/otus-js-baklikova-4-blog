@@ -1,8 +1,7 @@
-img {
+li img {
     height: 380px;
     width: 100%;
     object-fit: cover;
-    margin: 1em;
 }
 
 /* General styles */
@@ -31,26 +30,30 @@ img {
 /* Navigation item styles */
 div.sim-slider-arrow-left,
 div.sim-slider-arrow-right {
-    width: 22px;
-    height: 40px;
+    width: 40px;
+    height: 80px;
     position: absolute;
     cursor: pointer;
     opacity: 0.6;
     z-index: 4;
 }
 
+div.sim-slider-arrow-left img,div.sim-slider-arrow-right img {
+    width: 100%;
+}
+
 div.sim-slider-arrow-left {
     left: 10px;
     top: 40%;
     display: block;
-    background: url("../img/sim-arrow-left.png") no-repeat;
+    //background: url("../img/sim-arrow-left.png") no-repeat;
 }
 
 div.sim-slider-arrow-right {
     right: 10px;
     top: 40%;
     display: block;
-    background: url("../img/sim-arrow-right.png") no-repeat;
+   // background: url("../img/sim-arrow-right.png") no-repeat;
 }
 
 div.sim-slider-arrow-left:hover {
