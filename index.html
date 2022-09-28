@@ -12,5 +12,20 @@
     </header>
     <h1 class="mainList">Главная страница блога</h1>
     <a href="categories.html">Посмотреть список записей</a>
+    <div class="sim-slider">
+      <ul class="sim-slider-list">
+        <li><img src="img/screen.png" alt="screen"></li>    <!-- это экран -->
+        <li class="sim-slider-element"><img src="img/img1.jpg" alt="1"></li>
+        <li class="sim-slider-element"><img src="img/img2.jpg" alt="2"></li>
+        <li class="sim-slider-element"><img src="img/img3.jpg" alt="N"></li>
+      </ul>
+      <div class="sim-slider-arrow-left"></div>
+      <div class="sim-slider-arrow-right"></div>
+      <div class="sim-slider-dots"></div>
+    </div>
+    <!-- подключение слайдера -->
+    <script src="src/sim-slider.js"></script>
+    <!-- вызов слайдера -->
+    <script>new Sim()</script>
   </body>
 </html>
