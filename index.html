@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="src/sim-slider.js"></script>
     <title>Blog</title>
   </head>
   <body>
@@ -23,9 +24,10 @@
       <div class="sim-slider-arrow-right"></div>
       <div class="sim-slider-dots"></div>
     </div>
-    <!-- подключение слайдера -->
-    <script src="src/sim-slider.js"></script>
-    <!-- вызов слайдера -->
-    <script>new Sim()</script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        new Sim();
+      });
+    </script>
   </body>
 </html>
