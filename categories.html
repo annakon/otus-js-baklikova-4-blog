@@ -15,7 +15,7 @@
     </header>
     <main>
       <section>
-       <article>
+       <article class="article">
        <h2><a href="simplePages.html">Lorem.</a></h2>
        <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
@@ -26,7 +26,7 @@
         recusandae soluta?
        </p>
       </article>
-      <article>
+      <article class="article">
        <h2><a href="simplePages.html">Lorem ipsum.</a></h2>
        <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam, at
@@ -36,7 +36,7 @@
         praesentium ratione repellendus rerum sunt tempora, tenetur.
        </p>
       </article>
-      <article>
+      <article class="article">
        <h2><a href="simplePages.html">Lorem ipsum.</a></h2>
        <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
@@ -48,16 +48,16 @@
        </p>
       </article>
       </section>
-    </main>>
+    </main>
     <script>
-      document.addEventListener("click", (e) => {
-        if (e.target.nodeName === "A") {
-          localStorage.setItem(
-            "text",
-            JSON.stringify(e.target.parentNode.parentNode.innerHTML)
-          );
+        const articles = document.querySelectorAll(".article");
+        for (i = 0; i < articles.length; i++) {
+            const link = articles[i].querySelector("a");
+            const text = articles[i].querySelector("p");
+            link.addEventListener("click", () => {
+                localStorage.setItem("text", JSON.stringify(text.innerHTML));
+            });
         }
-      });
     </script>
   </body>
 </html>
