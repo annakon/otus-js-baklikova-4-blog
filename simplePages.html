@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+       <a href="index.html">на главную</a>
+       <a href="contacts.html" class="contacts">контакты</a>
+      </nav>
+    </header>
+    <main>
+     <article></article>
+    </main>
+    <script>
+      window.addEventListener("load", function (event) {
+        const a = localStorage.getItem("text");
+        if (a !== null) {
+          document.querySelector("article").innerHTML = JSON.parse(a, []);
+        }
+      });
+    </script>
+  </body>
+</html>
