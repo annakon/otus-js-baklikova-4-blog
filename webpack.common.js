@@ -3,8 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { resolve } = require("node:path");
 
-const mode = process.env.NODE_ENV;
-
 module.exports = {
   entry: { main: "./src/index.js" },
   output: {
