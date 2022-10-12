@@ -3,8 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { resolve } = require("node:path");
 
-const mode = process.env.NODE_ENV;
-
 module.exports = {
   entry: { main: "./src/index.js" },
   output: {
@@ -16,7 +14,6 @@ module.exports = {
     },
     // assetModuleFilename: 'images/[name][ext]'
   },
-  devtool: mode === "development" ? "eval-source-map" : "source-map",
   module: {
     rules: [
       {
@@ -81,11 +78,6 @@ module.exports = {
   ],
   optimization: {
     minimizer: [`...`, new CssMinimizerPlugin()],
-  },
-  devServer: {
-    compress: true,
-    port: 9000,
-    watchFiles: ["*.html"],
   },
   experiments: {
     topLevelAwait: true,
