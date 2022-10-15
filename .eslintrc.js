@@ -12,6 +12,8 @@ module.exports = {
   rules: {
     "no-param-reassign": "off",
     "no-plusplus": "off",
-    "no-loop-func": "off"
+    "no-loop-func": "off",
+    "func-names": "off",
+    "no-use-before-define": "off"
   },
 };
