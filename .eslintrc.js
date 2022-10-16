@@ -14,6 +14,7 @@ module.exports = {
     "no-plusplus": "off",
     "no-loop-func": "off",
     "func-names": "off",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "no-new": "off",
   },
 };
