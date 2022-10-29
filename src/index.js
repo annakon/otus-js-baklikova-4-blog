@@ -1,5 +1,5 @@
 import "../scss/styles.scss";
-import * as Sim from "./sim-slider";
+import {Sim} from "./sim-slider";
 
 document.addEventListener("DOMContentLoaded", () => {
   new Sim("slider1",{
