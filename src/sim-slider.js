@@ -1,18 +1,18 @@
-function Sim(sldrId) {
-  const id = document.getElementById(sldrId);
+function Sim(sliderId) {
+  const id = document.getElementById(sliderId);
   if (id) {
-    this.sldrRoot = id;
+    this.sliderRoot = id;
   } else {
-    this.sldrRoot = document.querySelector(".sim-slider");
+    this.sliderRoot = document.querySelector(".sim-slider");
   }
 
   // Slider objects
-  this.sldrList = this.sldrRoot.querySelector(".sim-slider-list");
-  this.sldrElements = this.sldrList.querySelectorAll(".sim-slider-element");
-  this.sldrElemFirst = this.sldrList.querySelector(".sim-slider-element");
-  this.leftArrow = this.sldrRoot.querySelector("div.sim-slider-arrow-left");
-  this.rightArrow = this.sldrRoot.querySelector("div.sim-slider-arrow-right");
-  this.indicatorDots = this.sldrRoot.querySelector("div.sim-slider-dots");
+  this.sliderList = this.sliderRoot.querySelector(".sim-slider-list");
+  this.sliderElements = this.sliderList.querySelectorAll(".sim-slider-element");
+  this.sliderElemFirst = this.sliderList.querySelector(".sim-slider-element");
+  this.leftArrow = this.sliderRoot.querySelector("div.sim-slider-arrow-left");
+  this.rightArrow = this.sliderRoot.querySelector("div.sim-slider-arrow-right");
+  this.indicatorDots = this.sliderRoot.querySelector("div.sim-slider-dots");
 
   // Initialization
   this.options = Sim.defaults;
@@ -42,8 +42,8 @@ Sim.prototype.elemPrev = function (num) {
     this.rightArrow.style.display = "block";
   }
 
-  this.sldrElements[this.currentElement].style.opacity = "1";
-  this.sldrElements[prevElement].style.opacity = "0";
+  this.sliderElements[this.currentElement].style.opacity = "1";
+  this.sliderElements[prevElement].style.opacity = "0";
 
   if (this.options.dots) {
     this.dotOn(prevElement);
@@ -65,8 +65,8 @@ Sim.prototype.elemNext = function (num) {
     this.leftArrow.style.display = "block";
   }
 
-  this.sldrElements[this.currentElement].style.opacity = "1";
-  this.sldrElements[prevElement].style.opacity = "0";
+  this.sliderElements[this.currentElement].style.opacity = "1";
+  this.sliderElements[prevElement].style.opacity = "0";
 
   if (this.options.dots) {
     this.dotOn(prevElement);
@@ -86,7 +86,7 @@ Sim.prototype.dotOff = function (num) {
 
 Sim.initialize = function (that) {
   // Constants
-  that.elemCount = that.sldrElements.length; // Количество элементов
+  that.elemCount = that.sliderElements.length; // Количество элементов
 
   // Variables
   that.currentElement = 0;
@@ -117,7 +117,7 @@ Sim.initialize = function (that) {
   }
   if (that.elemCount >= 1) {
     // показать первый элемент
-    that.sldrElemFirst.style.opacity = "1";
+    that.sliderElemFirst.style.opacity = "1";
   }
 
   if (!that.options.loop) {
@@ -127,14 +127,14 @@ Sim.initialize = function (that) {
     // инициализация автопрокруки
     setAutoScroll();
     // Остановка прокрутки при наведении мыши на элемент
-    that.sldrList.addEventListener(
+    that.sliderList.addEventListener(
       "mouseenter",
       () => {
         clearInterval(that.autoScroll);
       },
       false
     );
-    that.sldrList.addEventListener("mouseleave", setAutoScroll, false);
+    that.sliderList.addEventListener("mouseleave", setAutoScroll, false);
   }
 
   if (that.options.arrows) {
@@ -174,7 +174,7 @@ Sim.initialize = function (that) {
       sum += '<span class="sim-dot"></span>';
     }
     that.indicatorDots.innerHTML = sum;
-    that.indicatorDotsAll = that.sldrRoot.querySelectorAll("span.sim-dot");
+    that.indicatorDotsAll = that.sliderRoot.querySelectorAll("span.sim-dot");
     // Назначаем точкам обработчик события 'click'
     for (let n = 0; n < that.elemCount; n++) {
       that.indicatorDotsAll[n].addEventListener(
