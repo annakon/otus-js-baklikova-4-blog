@@ -1,4 +1,4 @@
-function Sim(sliderId) {
+function Sim(sliderId,options) {
   const id = document.getElementById(sliderId);
   if (id) {
     this.sliderRoot = id;
@@ -15,7 +15,11 @@ function Sim(sliderId) {
   this.indicatorDots = this.sliderRoot.querySelector("div.sim-slider-dots");
 
   // Initialization
-  this.options = Sim.defaults;
+  if (options) {
+    this.options = options;
+  } else {
+    this.options = Sim.defaults;
+  }
   Sim.initialize(this);
 }
 
