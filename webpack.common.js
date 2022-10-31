@@ -28,13 +28,6 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(jpg|jpeg)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "images/[name][ext]",
-        },
-      },
-      {
         test: /\.html$/i,
         loader: "html-loader",
       },
@@ -48,6 +41,13 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(jpg|jpeg|png)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "img/[name][ext]",
+        },
       },
     ],
   },

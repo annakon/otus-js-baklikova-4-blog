@@ -9,5 +9,13 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-loop-func": "off",
+    "func-names": "off",
+    "no-use-before-define": "off",
+    "no-new": "off",
+    "import/prefer-default-export": "off",
+  },
 };
