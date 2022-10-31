@@ -16,5 +16,6 @@ module.exports = {
     "func-names": "off",
     "no-use-before-define": "off",
     "no-new": "off",
+    "import/prefer-default-export": "off",
   },
 };
